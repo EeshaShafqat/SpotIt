@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home_layout"
+        android:icon="@drawable/home"
+        />
+
+    <item android:title="Search"
+        android:id="@+id/search_layout"
+        android:icon="@drawable/search"
+        />
+
+    <item
+        android:id="@+id/add_icon"
+        android:icon="@drawable/plus"
+        android:title="Add" />
+
+    <item android:title="Chat"
+        android:id="@+id/chat_layout"
+        android:icon="@drawable/baseline_chat_bubble_24"/>
+
+    <item android:title="Profile"
+        android:id="@+id/profile_layout"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+
+</menu>

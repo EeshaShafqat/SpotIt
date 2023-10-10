@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:text="Profile"
+                android:layout_alignParentBottom="true">
+
+            </TextView>
+
+            <ImageView
+
+                android:id="@+id/edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/edit_nprofile">
+
+            </ImageView>
+
+            <ImageView
+
+                android:id="@+id/logout"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/edit"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/logout">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/bg_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/light_gray">
+
+            </ImageView>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/gray"
+
+                />
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Eesha Shafqat"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="10dp">
+
+        </TextView>
+
+
+        <LinearLayout
+
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+
+            android:layout_below="@id/name"
+
+            android:layout_gravity="bottom"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:paddingHorizontal="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <!-- Location Icon -->
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/pin" />
+
+                <!-- "Islamabad" Text -->
+                <TextView
+
+                    android:id="@+id/location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/location_icon"
+                    android:text="Islamabad"
+                    android:textColor="#7C7B7B"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="18 items posted"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical">
+
+
+            </TextView>
+
+            <TextView
+
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="24 items rented"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical">
+
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/Featured_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Items You've Rented "
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Featured_items"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/Recent_searches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Your Items"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Recent_searches"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

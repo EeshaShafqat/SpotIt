@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailVerification"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/box1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:weightSum="10">
+
+
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="goBack"
+            android:src="@drawable/back_arrow"
+            >
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="Email Verification"
+            android:textColor="@color/gray"
+            android:textSize="26sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        android:layout_alignBottom="@id/box1"
+        >
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/line1"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/enter_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:paddingLeft="15dp"
+            android:text="Enter the code sent to your email"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/resend_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/enter_code"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="15dp"
+
+            android:text="Resend code in 23s"
+            android:textColor="@color/orange"
+            android:textSize="23sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resend_code"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:paddingHorizontal="18dp"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/pin1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_white"
+                android:padding="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/pin2"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_corners_white"
+                android:padding="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/pin3"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_white"
+                android:padding="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/pin4"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_corners_white"
+                android:padding="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/pin5"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_white"
+                android:padding="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/code"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+               >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="1"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="2"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="3"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn4"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="4"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn5"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="5"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn6"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="6"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Row 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn7"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="7"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn8"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="8"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn9"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="9"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Row 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginRight="20dp" />
+
+                        <Button
+                            android:id="@+id/btn0"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/dialpad_circle"
+                            android:text="0"
+                            android:textColor="@color/gray"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="45dp"
+                            android:layout_height="55dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/backspace"
+                            android:layout_marginVertical="10dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+
+</RelativeLayout>

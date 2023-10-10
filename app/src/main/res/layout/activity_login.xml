@@ -101,6 +101,8 @@
         </TextView>
 
         <Button
+
+            android:id="@+id/LoginBtn"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_alignTop="@id/login"
@@ -110,7 +112,8 @@
             android:text="Login"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:textAllCaps="false">
 
         </Button>
 

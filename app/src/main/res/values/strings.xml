@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">SpotIt</string>
+    <string name="app_name">Spot It</string>
+
+    <string-array name="countries">
+        <item>Select Country</item>
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>China</item>
+        <item>UAE</item>
+        <item>Turkey</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>Select City</item>
+        <item>Islamabad</item>
+        <item>Lahore</item>
+        <item>Karachi</item>
+    </string-array>
+
+    <string-array name="best_match">
+        <item>Best Match</item>
+        <item>Islamabad</item>
+        <item>Lahore</item>
+        <item>Karachi</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
