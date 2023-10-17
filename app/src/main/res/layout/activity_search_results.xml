@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".SearchResults"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:id="@+id/box1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="10">
+
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="7dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/back_arrow"
+                >
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="Search Results"
+                android:textColor="@color/gray"
+                android:textSize="26sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_alignBottom="@id/box1"
+            >
+
+        </View>
+        <RelativeLayout
+
+            android:id="@+id/some"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/line1"
+            android:paddingHorizontal="20dp"
+
+            >
+
+            <ImageView
+                android:layout_width="161dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_corners"
+                android:layout_alignParentEnd="true"
+
+                android:layout_toRightOf="@id/some_result"
+                android:layout_marginTop="20dp"/>
+            <Spinner
+
+                android:layout_marginTop="20dp"
+                android:layout_width="165dp"
+                android:layout_height="48dp"
+                android:spinnerMode="dropdown"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/some_result"
+                android:paddingLeft="20dp"
+                android:entries="@array/best_match">
+
+            </Spinner>
+
+            <TextView
+                android:id="@+id/some_result"
+                android:layout_width="190dp"
+                android:layout_height="48dp"
+                android:text="&quot;Some text&quot;"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical">
+
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/some"
+            android:paddingHorizontal="10dp">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -2,28 +2,44 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
     <item android:title="Home"
         android:id="@+id/home_layout"
         android:icon="@drawable/home"
+        app:showAsAction="always"
+        android:titleTextAppearance="?android:attr/textAppearanceMedium"
         />
 
     <item android:title="Search"
         android:id="@+id/search_layout"
         android:icon="@drawable/search"
+        app:showAsAction="always"
+        android:titleTextAppearance="?android:attr/textAppearanceMedium"
         />
 
     <item
         android:id="@+id/add_icon"
         android:icon="@drawable/plus"
-        android:title="Add" />
+        android:title="Add"
+        app:showAsAction="always"
+        android:titleTextAppearance="?android:attr/textAppearanceMedium"
+
+        />
 
     <item android:title="Chat"
         android:id="@+id/chat_layout"
-        android:icon="@drawable/baseline_chat_bubble_24"/>
+        android:icon="@drawable/baseline_chat_bubble_24"
+        app:showAsAction="always"
+        android:titleTextAppearance="?android:attr/textAppearanceMedium"
+        />
 
     <item android:title="Profile"
         android:id="@+id/profile_layout"
-        android:icon="@drawable/baseline_account_circle_24"/>
+        android:icon="@drawable/baseline_account_circle_24"
+        app:showAsAction="always"
+        android:titleTextAppearance="?android:attr/textAppearanceMedium"
+        />
 
 
 </menu>

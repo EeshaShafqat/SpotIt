@@ -33,6 +33,7 @@ public class ProfileFragment extends Fragment {
     ImageView logout;
 
    FirebaseAuth mAuth;
+    ImageView edit;
 
 
 
@@ -55,6 +56,21 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        //edit profile
+
+        edit = view.findViewById(R.id.edit);
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(requireActivity(), EditProfile.class);
+                startActivity(intent);
+            }
+        });
+
+
+        //logout
 
         mAuth =  FireAuthSingleton.getInstance();
 
@@ -111,8 +127,7 @@ public class ProfileFragment extends Fragment {
         adapter3 = new RecentSearchesAdapter(requireContext(), recentSearches);
 
 
-
-        LinearLayoutManager layoutManager3 = new  GridLayoutManager(requireContext(), 2);
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         rv3.setLayoutManager(layoutManager3);
         rv3.setAdapter(adapter3);
 

@@ -22,6 +22,34 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+
+        //loading fragment
+
+        Intent intent = getIntent();
+
+        if (intent.hasExtra("FRAGMENT_TO_LOAD")) {
+            String fragmentToLoad = intent.getStringExtra("FRAGMENT_TO_LOAD");
+
+            Fragment selected = null;
+
+            // Check the value of fragmentToLoad and load the corresponding fragment
+            if ("home".equals(fragmentToLoad)) {
+                // Load the HomeFragment
+                selected = new HomeFragment();
+
+            } else if ("profile".equals(fragmentToLoad)) {
+                // Load another fragment
+                selected = new ProfileFragment();
+            }
+
+            if(selected!=null){
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView5,selected).commit();
+            }
+        }
+
+
+
+            //switching fragments with click
         BottomNavigationView navbar = findViewById(R.id.navbar);
         navbar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -31,21 +59,22 @@ public class Dashboard extends AppCompatActivity {
 
                 if (itemId == R.id.home_layout) {
 
-                    //selected = new HomeFragment();
+                    selected = new HomeFragment();
+
                 } else if (itemId == R.id.search_layout) {
 
-                    //selected = new SearchFragment();
+                    selected = new SearchFragment();
                 }
 
                 //post item screen
                 else if (itemId == R.id.add_icon) {
 
-                   // Intent intent = new Intent(DashboardActivity.this, PostItem.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(Dashboard.this, PostItem.class);
+                    startActivity(intent);
 
                 } else if (itemId == R.id.chat_layout) {
 
-                   // selected = new ChatFragment();
+                    selected = new ChatFragment();
 
                     //profile page
                 } else if (itemId == R.id.profile_layout) {

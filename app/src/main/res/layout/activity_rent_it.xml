@@ -1,0 +1,317 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailVerification"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/box1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_alignParentTop="true">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:onClick="goBack"
+            android:src="@drawable/back_arrow">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/back"
+            android:gravity="center_vertical"
+            android:text="Item"
+            android:textColor="@color/gray"
+            android:textSize="26sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+
+            android:id="@+id/report"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="Report Item"
+            android:textColor="@color/orange"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_below="@+id/box1">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+
+        android:id="@+id/slider_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/viewPager"
+        android:gravity="center_horizontal|center_vertical">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:layout_below="@id/slider_dots"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+
+            android:id="@+id/num"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$12"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="5dp"
+           >
+
+        </TextView>
+
+        <TextView
+
+            android:id="@+id/hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/ hr"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:layout_toRightOf="@id/num"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="5dp"
+
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <TextView
+
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_below="@id/price"
+        android:text="Name of the item comes here"
+        android:textColor="@color/gray"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="10dp">
+
+    </TextView>
+
+
+    <RelativeLayout
+
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+
+        android:layout_below="@id/name"
+
+        android:layout_gravity="bottom"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical">
+
+            <!-- Location Icon -->
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/pin" />
+
+            <!-- "Islamabad" Text -->
+            <TextView
+
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/location_icon"
+                android:text="Islamabad"
+                android:textColor="#7C7B7B"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="7th Mar"
+            android:textSize="14sp">
+
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <TextView
+
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:text ="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Mauris nec nisi a sem
+elementum condimentum. Proin volutpat erat
+tortor, eu gravida orci efficitur eget."
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+
+        android:paddingHorizontal="10dp">
+
+    </TextView>
+
+    <RelativeLayout
+
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@id/description">
+
+        <!-- Contact Photo in a Circle -->
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_photo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/gray"
+
+            />
+
+        <!-- Contact Name -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/contact_photo"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignTop="@id/new_msg"
+                android:layout_marginTop="-26dp"
+                android:text="Makena Dias"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+
+                android:id="@+id/new_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="30dp"
+
+                android:text="1 New Message"
+                android:textColor="@color/orange"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+
+
+            android:src="@drawable/baseline_chat_bubble_24"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/medium_gray"
+
+        android:layout_above="@+id/post"
+        android:layout_marginBottom="5dp"
+        >
+
+    </View>
+
+    <Button
+
+        android:id="@+id/post"
+        android:layout_width="396dp"
+        android:layout_height="66dp"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginHorizontal="15dp"
+        android:textAllCaps="false"
+
+        android:layout_marginBottom="10dp"
+
+        android:background="@drawable/rounded_corners_orange"
+        android:text="Rent It"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </Button>
+
+
+</RelativeLayout>

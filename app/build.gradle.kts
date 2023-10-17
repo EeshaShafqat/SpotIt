@@ -3,6 +3,8 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+
+
 android {
     namespace = "com.example.spotit"
     compileSdk = 34
@@ -30,11 +32,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
 
     implementation("com.google.firebase:firebase-auth:22.1.2")
+    implementation(fileTree(mapOf(
+        "dir" to "E:\\Desktop\\SpotIt\\app\\libs",
+        "include" to listOf("*.aar", "*.jar"),
+
+    )))
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation ("androidx.test:runner:1.4.0")
     androidTestImplementation ("androidx.test:rules:1.4.0")

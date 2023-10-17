@@ -125,6 +125,7 @@ public class Login extends AppCompatActivity {
 
             Toast.makeText(Login.this, currentUser.getUid() + " ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Login.this, Dashboard.class);
+            intent.putExtra("FRAGMENT_TO_LOAD", "home");
             startActivity(intent);
             finish();
         }

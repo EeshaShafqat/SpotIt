@@ -106,6 +106,7 @@ public class SignUp extends AppCompatActivity {
 
             Toast.makeText(SignUp.this, currentUser.getUid() + " ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SignUp.this, Dashboard.class);
+            intent.putExtra("FRAGMENT_TO_LOAD", "profile");
             startActivity(intent);
             finish();
         }

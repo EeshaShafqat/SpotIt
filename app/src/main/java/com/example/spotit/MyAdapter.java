@@ -68,10 +68,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             String Date = ls.get(position).getDate();
             String Price = ls.get(position).getPrice();
 
-            //Intent intent = new Intent(context, RentIt.class);
+            Intent intent = new Intent(context, RentIt.class);
             //intent.putExtra("name",name);
 
-            //context.startActivity(intent);
+            context.startActivity(intent);
 
         }
     }
