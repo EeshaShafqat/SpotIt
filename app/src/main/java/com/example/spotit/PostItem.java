@@ -24,10 +24,20 @@ public class PostItem extends AppCompatActivity {
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(PostItem.this, Upload.class);
+                startActivity(intent);
             }
         });
 
+
+        uploadVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PostItem.this, Upload.class);
+                startActivity(intent);
+            }
+        });
 
 
 

@@ -37,12 +37,14 @@ android {
 
 dependencies {
 
+    implementation ("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
     implementation("com.google.firebase:firebase-auth:22.1.2")
     implementation(fileTree(mapOf(
         "dir" to "E:\\Desktop\\SpotIt\\app\\libs",
         "include" to listOf("*.aar", "*.jar"),
 
     )))
+    implementation("com.google.firebase:firebase-crashlytics-buildtools:2.9.9")
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation ("androidx.test:runner:1.4.0")
     androidTestImplementation ("androidx.test:rules:1.4.0")
