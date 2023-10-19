@@ -70,6 +70,8 @@ public class ProfileFragment extends Fragment {
         });
 
 
+
+
         //logout
 
         mAuth =  FireAuthSingleton.getInstance();
@@ -134,5 +136,10 @@ public class ProfileFragment extends Fragment {
         return view;
 
 
+    }
+
+    void editProfile(){
+        Intent intent = new Intent(requireContext(), EditProfile.class );
+        startActivity(intent);
     }
 }
