@@ -11,4 +11,14 @@ public class Report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
     }
+
+
+    void report(){
+        //userergejjfhjhhjhdfjhvdfhjvjhdfbvjhd
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = a+b;
+
+
+    }
 }
