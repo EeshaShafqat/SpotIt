@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    implementation ("com.squareup.picasso:picasso:2.8")
     implementation ("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
     implementation("com.google.firebase:firebase-auth:22.1.2")
     implementation(fileTree(mapOf(
