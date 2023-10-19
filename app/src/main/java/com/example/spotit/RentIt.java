@@ -123,6 +123,20 @@ public class RentIt extends AppCompatActivity {
 
     }
 
+    void calculateRent(){
+        //eenie meenie efkjjfhjerhhjh ebfjrfjrejhbr
+        //dhsdvhbvhfdhv
+        //vhfrwvjhehjrvgjhvhf
+        //efgwegvhgvvjhdbjh vbdsh
+    }
+    Integer sumAll(){
+        //eenie meenie efkjjfhjerhhjh ebfjrfjrejhbr
+        //dhsdvhbvhfdhv
+        //vhfrwvjhehjrvgjhvhf
+        //efgwegvhgvvjhdbjh vbdsh
+        //hueheuruwfhrgjhsdhvcbhbdbv;vjkfvjfdb
+        return 1;
+    }
 
 
 
