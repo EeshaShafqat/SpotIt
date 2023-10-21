@@ -36,6 +36,38 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.item_date.setText(ls.get(position).getDate());
         holder.item_price.setText(ls.get(position).getPrice());
 
+        @Override public void getView(int position, View convertView, ViewGroup parent) {
+            SquaredImageView view = (SquaredImageView) convertView;
+            if (view == null) {
+                view = new SquaredImageView(context);
+            }
+            String url = getItem(position);
+
+            Picasso.get().load(url).into(view);
+        }
+
+        Picasso.get()
+                .load(url)
+                .resize(50, 50)
+                .centerCrop()
+                .into(imageView)
+
+
+        public class CropSquareTransformation implements Transformation {
+            @Override public Bitmap transform(Bitmap source) {
+                int size = Math.min(source.getWidth(), source.getHeight());
+                int x = (source.getWidth() - size) / 2;
+                int y = (source.getHeight() - size) / 2;
+                Bitmap result = Bitmap.createBitmap(source, x, y, size, size);
+                if (result != source) {
+                    source.recycle();
+                }
+                return result;
+            }
+
+            @Override public String key() { return "square()"; }
+        }
+
 
     }
 
